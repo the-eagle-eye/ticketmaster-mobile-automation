@@ -1,0 +1,10 @@
+{
+    "signOutButton": {
+        "ios": "-ios class chain:**/XCUIElementTypeButton[`label == 'Sign Out'`]",
+        "android": "android=new UiSelector().resourceIdMatches('.*:id/Sign Out Button')"
+    },
+    "headerTextLabel": {
+        "ios": "-ios class chain:**/XCUIElementTypeStaticText[`label == ;My Account;`]",
+        "android": "android=new UiSelector().resourceIdMatches('.*:id/My Account')"
+    }
+}

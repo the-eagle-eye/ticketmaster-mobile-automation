@@ -1,0 +1,14 @@
+{
+    "emailTextField": {
+        "ios": "-ios class chain:**/XCUIElementTypeTextField[`label == 'Email Field'`]",
+        "android": "android=new UiSelector().resourceIdMatches('.*:id/Email Field')')"
+    },
+    "passwordTextField": {
+        "ios": "-ios class chain:**/XCUIElementTypeSecureTextField[`label == 'Password Field'`]",
+        "android": "android=new UiSelector().resourceIdMatches('.*:id/Password Field')"
+    },
+    "signInButton": {
+        "ios": "-ios class chain:**/XCUIElementTypeButton[`label == 'Sign In'`]",
+        "android": "android=new UiSelector().resourceIdMatches('.*:id/Sign In Button')"
+    }
+}

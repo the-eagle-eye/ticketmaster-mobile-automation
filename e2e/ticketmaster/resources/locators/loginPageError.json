@@ -1,0 +1,14 @@
+{
+    "invalidEmailError": {
+        "ios": "-ios class chain:**/XCUIElementTypeStaticText[`label == 'Long Error String For Invalid Email'`]",
+        "android": "android=new UiSelector().resourceIdMatches('.*:id/Long Error String For Invalid Email')"
+    },
+    "invalidPasswordError": {
+        "ios": "-ios class chain:**/XCUIElementTypeStaticText[`label == 'Long Error String For Invalid Password'`]",
+        "android": "android=new UiSelector().resourceIdMatches('.*:id/Long Error String For Invalid Password')"
+    },
+    "forgotPasswordButton": {
+        "ios": "-ios class chain:**/XCUIElementTypeButton[`label == 'Forgot Password'`]",
+        "android": "android=new UiSelector().resourceIdMatches('.*:id/Forgot Password Button')"
+    }
+}
