@@ -1,0 +1,37 @@
+{
+    "compilerOptions": {
+        "types": [
+            "node",
+            "webdriverio/async",
+            "@wdio/cucumber-framework",
+            "expect-webdriverio",
+            "chai",
+        ],
+        "target": "es2019",
+        "moduleDetection": "force",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "outDir": "./dist",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "baseUrl": "./e2e",
+        "paths": {
+            "@common/*": [
+                "./common/*"
+            ],
+            "@config/*": [
+                "./config/*"
+            ],
+            "@conf/*": [
+                "./conf/*"
+            ],
+            "@ticketmaster/*": [
+                "./ticketmaster/*"
+            ],
+            "@apps/*": [
+                "./apps/*"
+            ]
+        }
+    },
+}
