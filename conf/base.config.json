@@ -1,4 +1,5 @@
 {
+    "OS": "ios",
     "maxInstances": 1,
     "defaultWait": 30000,
     "longWait": 60000,
@@ -7,5 +8,6 @@
     "iOsDeviceName": "iPhone 14",
     "iOsPlatformVersion": "16.0",
     "androidDeviceName": "Samsung Galaxy S23",
-    "androidPlatformVersion": "13.0"
+    "androidPlatformVersion": "13.0",
+    "interval_hundred_milisecond": 100
 }

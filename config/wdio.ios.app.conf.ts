@@ -6,7 +6,7 @@ import * as baseConfig from '../conf/base.config.json';
 // Appium capabilities
 config.capabilities = [
     {
-        platformName: 'iOS',
+        platformName: baseConfig.OS,
         noReset: true,
         fullReset: false,
         maxInstances: 1,
