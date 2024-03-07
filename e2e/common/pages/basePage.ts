@@ -23,7 +23,7 @@ export class BasePage {
     * @param element - WebdriverIO.WebElement
     *
     */
-    public async isDisplayed(ele: WebdriverIO.Element) {
+    public isDisplayed(ele: any) {
         return ele.isDisplayed();
     }
     
@@ -52,15 +52,15 @@ export class BasePage {
 
     /**
     * Scroll till element is in visible state
-    * @param element WebdriverIO.Element
+    * @param element any
     * @returns : Scroll till element is in visible state
     */
 
-    public async elementScrollIntoView(element: WebdriverIO.Element) {
+    public async elementScrollIntoView(element: any) {
         return this.executeScript('arguments[0].scrollIntoView(true)', [element]);
     }
 
-    public async executeScript(script: string, elements?: WebdriverIO.Element[]) {
+    public async executeScript(script: string, elements?: any[]) {
         return driver.executeScript(script, elements);
     }
 
@@ -69,7 +69,7 @@ export class BasePage {
     * @param element - WebdriverIO.WebElement
     *
     */
-    public click(ele: WebdriverIO.Element, waitTime?: number) {
+    public click(ele: any, waitTime?: number) {
         let maxWait = baseConfig.defaultWait;
         // override the maxWait Time
         if (waitTime) {
@@ -87,11 +87,11 @@ export class BasePage {
 
       /**
    * Wait for the given element to become visible
-   * @param  {WebdriverIO.Element}   Element
+   * @param  {any}   Element
    * @param  {boolean}   falseCase Whether or not to expect a visible or hidden state
    * @param  {number} maxTimeOut optional timeout
    */
-  public waitForElementToBeDisplayed(element: WebdriverIO.Element, falseCase: any, maxTimeOut?: number) {
+  public waitForElementToBeDisplayed(element: any, falseCase: any, maxTimeOut?: number) {
     /**
     * Maximum number of milliseconds to wait for
     * @type {Int}
@@ -113,7 +113,7 @@ export class BasePage {
     * @param element - WebdriverIO.WebElement
     *
     */
-    public isClickable(ele: WebdriverIO.Element) {
+    public isClickable(ele: any) {
     return ele.isClickable();
     }
     
@@ -123,8 +123,20 @@ export class BasePage {
     * @param text -string
     *
     */
-    public sendKeys(ele: WebdriverIO.Element, text: string) {
+    public sendKeys(ele: any, text: string) {
         ele.clearValue();
-        ele.setValue(text);
+        return ele.setValue(text);
+    }
+    
+    /**
+    * get element text
+    * @param ele - any element
+    * @return - promise that resolves into element visible text
+    */
+    public getElementText(element: any, checkTextLengthFlag?: boolean): Promise<string> {
+        if (checkTextLengthFlag) {
+        this.waitUntill(async () => (element.getText()).length > 0, 'element text length is not greater then 0', baseConfig.defaultWait);
+        }
+        return (element.getText()).trim().replace(/[\n\r]/g, ' ');
     }
 }
