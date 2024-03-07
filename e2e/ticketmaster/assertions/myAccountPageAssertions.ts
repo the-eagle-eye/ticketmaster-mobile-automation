@@ -10,7 +10,7 @@ class MyAccountPageAssertions {
         expect(myAccountPageActions.signOutButtonIsDisplayed).toBeTruthy;
     }
 
-    public theUserShouldNotSeeTheSignOutButtonDisplayed() {
+    public theUserShouldNotSeeTheSignInButtonDisplayed() {
         expect(myAccountPageActions.signInButtonIsNotDisplayed).toBeFalsy;
     }
 }

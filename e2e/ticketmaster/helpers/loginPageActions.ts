@@ -2,7 +2,11 @@ import { BasePage } from "@common/pages/basePage";
 import { loginPage as page} from "@ticketmaster/pages/loginPage";
 
 class LoginPageActions extends BasePage {
- 
+    
+    constructor() {
+        super();
+    }
+
     public enterEmail(userEmail: string) {
         page.emailTextField.scrollIntoView();
         this.sendKeys(page.emailTextField, userEmail);

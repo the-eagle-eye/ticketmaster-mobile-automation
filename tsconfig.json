@@ -31,6 +31,9 @@
             ],
             "@apps/*": [
                 "./apps/*"
+            ],
+            "@resources/*": [
+                "./resources/*"
             ]
         }
     },
