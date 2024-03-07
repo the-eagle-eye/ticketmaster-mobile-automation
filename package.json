@@ -4,7 +4,8 @@
   "description": "iOS & Android Mobile automation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "android.app": "./node_modules/.bin/wdio ./config/wdio.android.app.conf.ts",
+    "ios.app": "./node_modules/.bin/wdio ./config/wdio.ios.app.conf.ts",
     "wdio": "wdio run ./wdio.conf.ts"
   },
   "repository": {

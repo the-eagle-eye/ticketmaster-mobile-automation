@@ -14,7 +14,7 @@ config.cucumberOpts.require = ['./tests/steps/**/app*.steps.js'];
 // http://appium.io/docs/en/writing-running-appium/caps/#general-capabilities
 config.capabilities = [
     {
-        platformName: 'Android',
+        platformName: baseConfig.OS,
         'appium:deviceName': baseConfig.androidDeviceName,
         'appium:platformVersion': baseConfig.androidPlatformVersion,
         'appium:orientation': 'PORTRAIT',
